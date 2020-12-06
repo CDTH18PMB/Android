@@ -27,7 +27,7 @@
             app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerView_CacBuocLam"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginTop="8dp"
@@ -43,16 +43,16 @@
             android:text="Gợi ý món"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_CacBuocLam"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_CacBuocLam" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView2"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/recyclerView"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView_CacBuocLam"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_CacBuocLam"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
