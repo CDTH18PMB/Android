@@ -2,18 +2,30 @@ package com.hoanglam.congthucnauan;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.LinkedList;
+
 public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
+    private final LinkedList<CacBuocLam> cacBuocLam = new LinkedList<>();
+    private RecyclerView mRecyclerView;
+    private CacBuocLamAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tao_cong_thuc__buoc_3_);
+
+        this.mRecyclerView = findViewById(R.id.recyclerView_CacBuocLam);
+        this.mAdapter = new CacBuocLamAdapter(this,cacBuocLam);
+        this.mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void backPreviousActivity(View view) {
@@ -49,7 +61,18 @@ public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
     }
 
     public void addStep(View view) {
-        Intent addStep = new Intent(this,TaoCongThuc_Buoc_3_1_Activity.class);
-        startActivity(addStep);
+        //Intent addStep = new Intent(this,TaoCongThuc_Buoc_3_1_Activity.class);
+        //startActivity(addStep);
+        int size = cacBuocLam.size();
+
+        CacBuocLam mCacBuocLam = new CacBuocLam();
+        mCacBuocLam.setImage("Image");
+        mCacBuocLam.setStep("Buoc 1");
+        mCacBuocLam.setContent("Content");
+
+        cacBuocLam.addLast(mCacBuocLam);
+
+        mRecyclerView.getAdapter().notifyItemInserted(size);
+        mRecyclerView.smoothScrollToPosition(size);
     }
 }
