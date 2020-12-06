@@ -1,6 +1,8 @@
 package com.hoanglam.congthucnauan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +10,27 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.LinkedList;
+
 public class TaiKhoanActivity extends AppCompatActivity {
+    LinkedList<String> List;
+    RecyclerView mRecyclerView;
+    TaiKhoanAdapter mTaiKhoanAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tai_khoan);
+        //tạo một mảng
+        this.List = new LinkedList<String>();
+        for(int i = 1 ; i< 10;i++){
+            List.addLast("Món số: "+ i);
+        }
+        mRecyclerView = findViewById(R.id.RecyclerView_activity_tai_khoan);
+        mTaiKhoanAdapter = new TaiKhoanAdapter(this, this.List);
+        mRecyclerView.setAdapter(mTaiKhoanAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
     public void DaThich(View view) {
         Intent intent = new Intent(this, Tai_Khoan_Da_Thich.class);
