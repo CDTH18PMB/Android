@@ -7,13 +7,34 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.LinkedList;
 
 public class Tai_Khoan_Da_Thich extends AppCompatActivity {
+    LinkedList<String> ListTenMonAn;
+    LinkedList<String> ListTenNguoiTao;
+    RecyclerView mRecyclerView;
+    TaiKhoanDaThichAdapter mTaiKhoanDaThichAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tai_khoan_da_thich);
+        //tạo một mảng
+        this.ListTenMonAn = new LinkedList<String>();
+        for(int i = 1 ; i< 10;i++){
+            ListTenMonAn.addLast("Món số: "+ i);
+        }
+        this.ListTenNguoiTao = new LinkedList<String>();
+        for(int i = 1 ; i< 10;i++){
+            ListTenNguoiTao.addLast("Người số: "+ i);
+        }
+        mRecyclerView = findViewById(R.id.RecyclerView_activity_tai_khoan_da_thich);
+        mTaiKhoanDaThichAdapter = new TaiKhoanDaThichAdapter(this, this.ListTenMonAn,this.ListTenNguoiTao);
+        mRecyclerView.setAdapter(mTaiKhoanDaThichAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void MonCuaTui(View view) {
