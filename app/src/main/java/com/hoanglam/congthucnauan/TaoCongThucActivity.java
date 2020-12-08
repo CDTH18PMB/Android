@@ -28,7 +28,7 @@ public class TaoCongThucActivity extends AppCompatActivity {
             intent = new Intent(this,activity_timkiem.class);
             startActivity(intent);
         }else if(id == R.id.ic_MonAn){
-            intent = new Intent(this,activity_timkiem.class);
+            intent = new Intent(this,MonAnActivity.class);
             startActivity(intent);
         }else if(id == R.id.ic_Account){
             intent = new Intent(this,TaiKhoanActivity.class);

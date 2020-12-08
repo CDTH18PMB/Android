@@ -1,5 +1,6 @@
 package com.hoanglam.congthucnauan;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 
@@ -17,10 +19,15 @@ public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private CacBuocLamAdapter mAdapter;
 
+    private int count = 0;
+
+    public static int ADDSTEP_CODE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tao_cong_thuc__buoc_3_);
+
 
         this.mRecyclerView = findViewById(R.id.recyclerView_CacBuocLam);
         this.mAdapter = new CacBuocLamAdapter(this,cacBuocLam);
@@ -47,7 +54,7 @@ public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
             intent = new Intent(this,activity_timkiem.class);
             startActivity(intent);
         }else if(id == R.id.ic_MonAn){
-            intent = new Intent(this,activity_timkiem.class);
+            intent = new Intent(this,MonAnActivity.class);
             startActivity(intent);
         }else if(id == R.id.ic_Account){
             intent = new Intent(this,TaiKhoanActivity.class);
@@ -61,14 +68,30 @@ public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
     }
 
     public void addStep(View view) {
-        //Intent addStep = new Intent(this,TaoCongThuc_Buoc_3_1_Activity.class);
-        //startActivity(addStep);
-        int size = cacBuocLam.size();
+        Intent addStep = new Intent(this,TaoCongThuc_Buoc_3_1_Activity.class);
+        startActivityForResult(addStep,ADDSTEP_CODE);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == ADDSTEP_CODE){
+            if(resultCode == RESULT_OK){
+                this.count++;
+                String img = "Hinh anh";
+                String step = "Bước " + this.count;
+                String content = data.getStringExtra(TaoCongThuc_Buoc_3_1_Activity.CONTENT);
+                addStepRecyclerView(img, step, content);
+            }
+        }
+    }
+
+    public void addStepRecyclerView(String img, String step, String content){
+        int size = cacBuocLam.size();
         CacBuocLam mCacBuocLam = new CacBuocLam();
-        mCacBuocLam.setImage("Image");
-        mCacBuocLam.setStep("Buoc 1");
-        mCacBuocLam.setContent("Content");
+        mCacBuocLam.setImage(img);
+        mCacBuocLam.setStep(step);
+        mCacBuocLam.setContent(content);
 
         cacBuocLam.addLast(mCacBuocLam);
 

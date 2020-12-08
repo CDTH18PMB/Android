@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CongThucNauAn">
-        <activity android:name=".TaiKhoanActivity"/>
-        <activity android:name=".Tai_Khoan_Da_Thich"/>
-        <activity android:name=".Tai_Khoan_Setting"/>
-        <activity android:name=".Tai_khoan_edit_profile"/>
+        <activity android:name=".ChiTietMonAnActivity"></activity>
+        <activity android:name=".MonAnActivity" />
+        <activity android:name=".TaiKhoanActivity" />
+        <activity android:name=".Tai_Khoan_Da_Thich" />
+        <activity android:name=".Tai_Khoan_Setting" />
+        <activity android:name=".Tai_khoan_edit_profile" />
         <activity android:name=".activity_dangky" />
         <activity android:name=".activity_home" />
         <activity android:name=".activity_timkiem" />
