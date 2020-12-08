@@ -60,7 +60,7 @@
             android:id="@+id/const_DaThich"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:background="@drawable/border"
+            android:background="@drawable/border_blue"
             android:onClick="DaThich"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline3"

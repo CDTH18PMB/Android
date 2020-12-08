@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-public class activity_home extends AppCompatActivity {
+public class ChiTietMonAnActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_chi_tiet_mon_an);
     }
 
     public void itemNavClick(View view) {
@@ -21,8 +23,8 @@ public class activity_home extends AppCompatActivity {
         if(id == R.id.ic_Search){
             intent = new Intent(this,activity_timkiem.class);
             startActivity(intent);
-        }else if(id == R.id.ic_MonAn){
-            intent = new Intent(this, MonAnActivity.class);
+        }else if(id == R.id.ic_Home){
+            intent = new Intent(this, activity_home.class);
             startActivity(intent);
         }else if(id == R.id.ic_Create){
             intent = new Intent(this,TaoCongThucActivity.class);

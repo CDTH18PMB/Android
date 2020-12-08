@@ -69,16 +69,16 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/btnHoanThanh"
+            android:id="@+id/btn_addStep"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:onClick="openNextStep"
             android:text="@string/HoanThanh"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+            app:layout_constraintEnd_toEndOf="@+id/txt_Detail_Step"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+            app:layout_constraintStart_toStartOf="@+id/txt_Detail_Step" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -141,7 +141,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/txt_Detail_Step"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginTop="8dp"

@@ -28,7 +28,7 @@ public class activity_timkiem extends AppCompatActivity {
             intent = new Intent(this,activity_home.class);
             startActivity(intent);
         }else if(id == R.id.ic_MonAn){
-            intent = new Intent(this,activity_timkiem.class);
+            intent = new Intent(this,MonAnActivity.class);
             startActivity(intent);
         }else if(id == R.id.ic_Create){
             intent = new Intent(this,TaoCongThucActivity.class);
