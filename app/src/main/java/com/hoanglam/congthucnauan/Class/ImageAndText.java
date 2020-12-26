@@ -1,4 +1,4 @@
-package com.hoanglam.congthucnauan;
+package com.hoanglam.congthucnauan.Class;
 
 public class ImageAndText {
     public String name;

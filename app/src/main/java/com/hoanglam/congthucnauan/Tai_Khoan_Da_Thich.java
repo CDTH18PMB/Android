@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.hoanglam.congthucnauan.Adapter.TaiKhoanDaThichAdapter;
+
 import java.util.LinkedList;
 
 public class Tai_Khoan_Da_Thich extends AppCompatActivity {

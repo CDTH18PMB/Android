@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_MonAn"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <TextView
+        android:id="@+id/txt_TenMon_MonAn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_MonAn"
+        app:layout_constraintTop_toTopOf="@+id/img_MonAn" />
+
+    <TextView
+        android:id="@+id/txt_LuotThich_MonAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:drawableLeft="@drawable/ic_baseline_like_pink"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_LuotXem_MonAn"
+        app:layout_constraintTop_toTopOf="@+id/txt_LuotXem_MonAn" />
+
+    <TextView
+        android:id="@+id/txt_LuotXem_MonAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_baseline_views_green"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_TenMon_MonAn"
+        app:layout_constraintTop_toBottomOf="@+id/txt_TenMon_MonAn" />
+
+    <TextView
+        android:id="@+id/txt_NguoiTao_MonAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_MonAn"
+        app:layout_constraintStart_toStartOf="@+id/txt_LuotXem_MonAn" />
+
+    <TextView
+        android:id="@+id/txt_ThoiGianNau_MonAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:drawableLeft="@drawable/ic_baseline_timer_24"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_NguoiTao_MonAn"
+        app:layout_constraintTop_toTopOf="@+id/txt_NguoiTao_MonAn" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_MonAn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

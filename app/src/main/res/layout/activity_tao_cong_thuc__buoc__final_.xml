@@ -72,13 +72,13 @@
             android:id="@+id/btn_addStep"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:onClick="openNextStep"
             android:text="@string/HoanThanh"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/txt_Detail_Step"
+            app:layout_constraintEnd_toEndOf="@+id/txt_MoTa"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/txt_Detail_Step" />
+            app:layout_constraintStart_toStartOf="@+id/txt_MoTa" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -126,7 +126,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner_LoaiMon" />
 
         <TextView
             android:id="@+id/textView19"
@@ -141,19 +141,19 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
         <EditText
-            android:id="@+id/txt_Detail_Step"
+            android:id="@+id/txt_MoTa"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_LoaiMon"
             app:layout_constraintStart_toStartOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinner_LoaiMon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

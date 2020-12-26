@@ -1,4 +1,4 @@
-package com.hoanglam.congthucnauan;
+package com.hoanglam.congthucnauan.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hoanglam.congthucnauan.R;
 
 import java.util.LinkedList;
 
