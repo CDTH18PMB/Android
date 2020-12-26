@@ -1,4 +1,4 @@
-package com.hoanglam.congthucnauan;
+package com.hoanglam.congthucnauan.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.hoanglam.congthucnauan.Class.ImageAndText;
+import com.hoanglam.congthucnauan.R;
 
 import java.util.ArrayList;
 

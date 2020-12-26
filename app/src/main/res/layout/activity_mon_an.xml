@@ -20,10 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="205dp" />
+            app:layout_constraintGuide_begin="196dp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
+            android:id="@+id/recyclerview_MonAn"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
@@ -41,7 +41,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
 
-            android:background="@drawable/duongvien_goctron"
+            android:background="@drawable/border_radius"
             android:iconifiedByDefault="false"
             android:queryHint="Tìm kiếm"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
             android:layout_height="33dp"
             android:layout_marginTop="16dp"
             android:text="Tiêu đề"
-            android:textSize="25sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@+id/searchView"
             app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
@@ -63,29 +63,30 @@
             android:id="@+id/textView_boloc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/duongvien_goctron"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_radius"
             android:drawableLeft="@drawable/ic_baseline_filter_alt_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
             android:onClick="test"
             android:text="Bộ lọc"
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView_sapxep"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/duongvien_goctron"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/border_radius"
             android:drawableLeft="@drawable/ic_outline_filter_list_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
             android:text="Sắp xếp"
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/searchView"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="@+id/textView_boloc" />
@@ -106,6 +107,7 @@
             android:id="@+id/ic_Home"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:onClick="itemNavClick"
             app:layout_constraintBottom_toTopOf="@+id/textView23"
             app:layout_constraintEnd_toEndOf="@+id/textView23"
             app:layout_constraintHorizontal_bias="0.444"

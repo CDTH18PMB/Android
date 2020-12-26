@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
@@ -28,10 +29,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView_anhmonan"
+                    android:id="@+id/img_AnhDaiDien_MonAn"
                     android:layout_width="0dp"
                     android:layout_height="450dp"
-                    android:layout_marginTop="4dp"
                     android:scaleType="fitXY"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -39,52 +39,68 @@
                     app:srcCompat="@drawable/ic_baseline_image_24" />
 
 
-                <TextView
-                    android:id="@+id/textView_tenmonan"
+                <View
+                    android:id="@+id/hr_top_tenmon"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
                     android:background="@color/black"
-                    android:gravity="center_horizontal"
-                    android:padding="10dp"
-                    android:text="Tên món ăn"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView_anhmonan" />
+                    app:layout_constraintTop_toBottomOf="@+id/img_AnhDaiDien_MonAn" />
+
+                <TextView
+                    android:id="@+id/txt_TenMon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:text="Tên món ăn"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_AnhDaiDien_MonAn" />
+
+                <View
+                    android:id="@+id/hr_bottom_tenmon"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_TenMon" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/const_LIkes_View_Save_Share"
+                    android:id="@+id/const_Likes_View_Save_Share"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_tenmonan">
+                    app:layout_constraintTop_toBottomOf="@+id/txt_TenMon">
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.52" />
+                        app:layout_constraintGuide_percent="0.50" />
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.70" />
+                        app:layout_constraintGuide_percent="0.75" />
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideline9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.26" />
+                        app:layout_constraintGuide_percent="0.25" />
 
                     <TextView
-                        android:id="@+id/txt_Likes"
+                        android:id="@+id/txt_LuotThich"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_baseline_like_red"
@@ -98,7 +114,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView34"
+                        android:id="@+id/txt_LuotXem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_baseline_views_green"
@@ -106,7 +122,7 @@
                         android:gravity="center_vertical"
                         android:text="0"
                         android:textSize="18sp"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/txt_Likes"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/txt_LuotThich"
                         app:layout_constraintEnd_toStartOf="@+id/guideline7"
                         app:layout_constraintStart_toStartOf="@+id/guideline9" />
 
@@ -119,7 +135,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/Luu"
                         android:textSize="18sp"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/txt_LuotXem"
                         app:layout_constraintEnd_toStartOf="@+id/guideline10"
                         app:layout_constraintStart_toStartOf="@+id/guideline7" />
 
@@ -146,54 +162,48 @@
                     android:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/const_LIkes_View_Save_Share" />
+                    app:layout_constraintTop_toBottomOf="@+id/const_Likes_View_Save_Share" />
 
                 <TextView
-                    android:id="@+id/textView_tentaikhoan"
+                    android:id="@+id/txt_NguoiTao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
+                    android:background="@drawable/border_radius"
                     android:drawableLeft="@drawable/ic_baseline_account_circle_24"
                     android:drawablePadding="10dp"
                     android:gravity="center_vertical"
+                    android:padding="10dp"
                     android:text="Tên tài khoản"
                     android:textSize="30sp"
                     android:textStyle=""
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/const_LIkes_View_Save_Share" />
+                    app:layout_constraintTop_toBottomOf="@+id/const_Likes_View_Save_Share" />
 
-                <View
-                    android:id="@+id/hr_bottom_taikhoan"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/black"
-                    android:backgroundTint="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_tentaikhoan" />
-
-                <ScrollView
+                <androidx.core.widget.NestedScrollView
                     android:id="@+id/scroll_MoTa"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
+                    android:background="@drawable/border_radius"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/hr_bottom_taikhoan">
+                    app:layout_constraintTop_toBottomOf="@+id/txt_NguoiTao"
+                    tools:ignore="MissingClass">
 
                     <TextView
-                        android:id="@+id/textView40"
+                        android:id="@+id/txt_MoTaMonAn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
-                </ScrollView>
+                        android:padding="10dp"
+                        android:text="TextView"
+                        android:textSize="18sp" />
+                </androidx.core.widget.NestedScrollView>
 
                 <View
                     android:id="@+id/hr_bottom_mota"
@@ -206,6 +216,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/scroll_MoTa" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -225,7 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:gravity="right"
                     android:text="Độ khó:"
                     android:textSize="18sp"
@@ -234,7 +245,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/txt_DoKho"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -249,16 +260,16 @@
                     android:id="@+id/textView_thoigiannau"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="32dp"
                     android:gravity="right"
                     android:text="Thời gian nấu: "
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/textView4"
-                    app:layout_constraintTop_toTopOf="@+id/textView4" />
+                    app:layout_constraintStart_toEndOf="@+id/txt_DoKho"
+                    app:layout_constraintTop_toTopOf="@+id/txt_DoKho" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txt_ThoiGianNau"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -272,7 +283,7 @@
                     android:id="@+id/hr_bottom_dokho"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -283,7 +294,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:gravity="center"
                     android:text="Nguyên liệu"
                     android:textSize="24sp"
@@ -291,12 +302,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hr_bottom_dokho" />
 
-                <ScrollView
+                <androidx.core.widget.NestedScrollView
                     android:id="@+id/scroll_NguyenLieu"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/border_radius"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -314,20 +325,22 @@
 
                             <TextView
                                 android:id="@+id/txt_NguyenLieu"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginBottom="8dp"
+                                android:padding="5dp"
                                 android:text="TextView"
+                                android:textSize="18sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
-                </ScrollView>
+                </androidx.core.widget.NestedScrollView>
 
                 <View
                     android:id="@+id/hr_bottom_nguyenlieu"
@@ -353,51 +366,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hr_bottom_nguyenlieu" />
 
-                <TextView
-                    android:id="@+id/textView_buoc1"
-                    android:layout_width="91dp"
-                    android:layout_height="23dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Bước 1"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView_huongdan"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_huongdan" />
-
-                <TextView
-                    android:id="@+id/textView9"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_HuongDan"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/border_radius"
-                    android:gravity="center"
-                    android:text="Nội dung bước 1"
+                    android:layout_height="match_parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.471"
-                    app:layout_constraintStart_toStartOf="@+id/textView_buoc1"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_buoc1" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="4dp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView9"
-                    app:layout_constraintHorizontal_bias="0.45"
-                    app:layout_constraintStart_toStartOf="@+id/textView9"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9"
-                    app:srcCompat="@drawable/ic_baseline_image_24" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_huongdan" />
 
                 <View
                     android:id="@+id/hr_bottom_huongdan"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView_HuongDan" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -500,6 +486,7 @@
             android:id="@+id/ic_Home"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:onClick="itemNavClick"
             app:layout_constraintBottom_toTopOf="@+id/textView23"
             app:layout_constraintEnd_toEndOf="@+id/textView23"
             app:layout_constraintHorizontal_bias="0.444"

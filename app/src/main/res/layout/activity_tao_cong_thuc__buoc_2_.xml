@@ -76,8 +76,8 @@
             android:onClick="openNextStep"
             android:text="@string/TiepTuc"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine2"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine2" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_NguyenLieu_Create"
+            app:layout_constraintStart_toStartOf="@+id/txt_NguyenLieu_Create" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -115,7 +115,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         <TextView
-            android:id="@+id/txt_Easy"
+            android:id="@+id/txt_Easy_Create"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/border_radius"
@@ -126,10 +126,10 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="@+id/txt_Normal" />
+            app:layout_constraintTop_toTopOf="@+id/txt_Normal_Create" />
 
         <TextView
-            android:id="@+id/txt_Normal"
+            android:id="@+id/txt_Normal_Create"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
@@ -145,7 +145,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/txt_Hard"
+            android:id="@+id/txt_Hard_Create"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
@@ -157,7 +157,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_Normal" />
+            app:layout_constraintTop_toTopOf="@+id/txt_Normal_Create" />
 
         <TextView
             android:id="@+id/textView10"
@@ -167,8 +167,8 @@
             android:text="@string/ThoiGianNau"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/txt_Easy"
-            app:layout_constraintTop_toBottomOf="@+id/txt_Easy" />
+            app:layout_constraintStart_toStartOf="@+id/txt_Easy_Create"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Easy_Create" />
 
         <TextView
             android:id="@+id/textView9"
@@ -183,7 +183,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/txt_ThoiGianNau_Create"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -193,7 +193,7 @@
             android:inputType="textPersonName"
             android:textStyle="italic"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
-            app:layout_constraintEnd_toEndOf="@+id/txt_Hard"
+            app:layout_constraintEnd_toEndOf="@+id/txt_Hard_Create"
             app:layout_constraintStart_toEndOf="@+id/textView11" />
 
         <TextView
@@ -220,7 +220,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView16" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine2"
+            android:id="@+id/txt_NguyenLieu_Create"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginTop="8dp"
@@ -229,7 +229,7 @@
             android:hint="Nhập vào nguyên liệu cần"
             android:inputType="textMultiLine"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintEnd_toEndOf="@+id/txt_ThoiGianNau_Create"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView16"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />

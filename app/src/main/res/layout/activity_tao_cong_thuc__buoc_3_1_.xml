@@ -54,16 +54,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Title"
         tools:context=".MainActivity">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
@@ -74,7 +64,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView11"
@@ -93,12 +83,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:text="@string/MoTa"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_ChooseImage_Step" />
 
         <TextView
             android:id="@+id/textView19"
@@ -113,15 +103,17 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
         <EditText
-            android:id="@+id/txt_Detail_Step"
+            android:id="@+id/txt_MoTa"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:autofillHints=""
             android:ems="10"
             android:gravity="start|top"
+            android:hint="Nội dung bước làm"
             android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -134,18 +126,30 @@
             android:text="@string/Luu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_Detail_Step" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_MoTa" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <ImageView
+            android:id="@+id/img_Step"
             android:layout_width="0dp"
             android:layout_height="200dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
             app:srcCompat="@drawable/ic_baseline_add_image" />
+
+        <Button
+            android:id="@+id/btn_ChooseImage_Step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Thêm ảnh"
+            android:onClick="chooseImage"
+            app:layout_constraintEnd_toEndOf="@+id/img_Step"
+            app:layout_constraintStart_toStartOf="@+id/img_Step"
+            app:layout_constraintTop_toBottomOf="@+id/img_Step" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

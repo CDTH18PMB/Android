@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/ic_baseline_tai_khoan_40" />
 
     <EditText
-        android:id="@+id/TaiKhoan"
+        android:id="@+id/txt_Username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/txt_Password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -53,25 +53,25 @@
         android:hint="@string/matkhau"
         android:inputType="textPassword"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/TaiKhoan"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Username"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/TaiKhoan"
-        app:layout_constraintTop_toBottomOf="@+id/TaiKhoan" />
+        app:layout_constraintStart_toStartOf="@+id/txt_Username"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Username" />
 
     <Button
-        android:id="@+id/ĐangNhap"
+        android:id="@+id/btn_DangNhap"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="Đăng Nhập"
-        android:onClick="openHomeActivity"
+        android:onClick="btnDangNhapClick"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Password"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintStart_toStartOf="@+id/txt_Password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
 
     <TextView
         android:id="@+id/textView5"
@@ -82,8 +82,8 @@
         android:textAlignment="inherit"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/ĐangNhap"
-        app:layout_constraintTop_toBottomOf="@+id/ĐangNhap" />
+        app:layout_constraintStart_toStartOf="@+id/btn_DangNhap"
+        app:layout_constraintTop_toBottomOf="@+id/btn_DangNhap" />
 
     <TextView
         android:id="@+id/txt_DangKy"

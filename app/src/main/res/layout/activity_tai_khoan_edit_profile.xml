@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/txt_ThoiGianNau_Create"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -118,9 +118,9 @@
         android:ems="10"
         android:hint="Số Điện Thoại"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/txt_ThoiGianNau_Create"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_ThoiGianNau_Create" />
 
     <ImageView
         android:id="@+id/ic_add_image"

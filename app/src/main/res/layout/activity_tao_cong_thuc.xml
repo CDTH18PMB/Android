@@ -59,13 +59,14 @@
             android:id="@+id/btn_TiepTuc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:onClick="openNextStep"
             android:text="@string/TiepTuc"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ic_Setting"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/ic_Setting" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView11"
@@ -104,7 +105,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/txt_TenMon_Create"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -125,19 +126,33 @@
             android:text="@string/AnhDaiDien"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintStart_toStartOf="@+id/txt_TenMon_Create"
+            app:layout_constraintTop_toBottomOf="@+id/txt_TenMon_Create" />
 
-        <ImageButton
-            android:id="@+id/ic_Setting"
+        <ImageView
+            android:id="@+id/img_AnhDaiDien"
             android:layout_width="0dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="TODO"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-            app:layout_constraintStart_toStartOf="@+id/textView10"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_ChooseImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:srcCompat="@drawable/ic_baseline_home_40" />
+            app:srcCompat="@drawable/ic_baseline_add_image" />
+
+        <Button
+            android:id="@+id/btn_ChooseImage"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:onClick="chooseImage"
+            android:text="Chọn ảnh"
+            app:layout_constraintBottom_toTopOf="@+id/btn_TiepTuc"
+            app:layout_constraintEnd_toEndOf="@+id/img_AnhDaiDien"
+            app:layout_constraintStart_toStartOf="@+id/img_AnhDaiDien" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
