@@ -42,4 +42,22 @@
     <string name="lbl_set_profile_photo">Chọn</string>
     <string name="lbl_take_camera_picture">Camera</string>
     <string name="lbl_choose_from_gallery">Thư viện ảnh</string>
+    <string name="mon_cua_toi">Món của tôi</string>
+    <string name="da_thich">Đã thích</string>
+    <string name="username_tk">Username</string>
+    <string name="mat_khau_tk">Mật Khẩu</string>
+    <string name="dang_xuat_tk">Đăng Xuất</string>
+    <string name="txt_mat_khau_tk">Mật khẩu</string>
+    <string name="thong_tin_ca_nhan">Thông tinh cá nhân</string>
+    <string name="ten_tk">Tên</string>
+    <string name="so_dien_thoai_tk">Số Điện Thoại</string>
+    <string name="txt_ten_tk">Tên</string>
+    <string name="txt_sodienthoai_tk">Số điện thoại</string>
+    <string name="txt_email_tk">email</string>
+    <string name="ten_mon_an_tk">Tên món ăn</string>
+    <string name="luot_xem_tk">5000</string>
+    <string name="thoi_gian_tk">15 phút</string>
+    <string name="luot_thich_tk">3000</string>
+    <string name="ten_nguoi_tao_tk">Tên người tạo</string>
+    <string name="thoi_gian_nau_tk">150 phút</string>
 </resources>
