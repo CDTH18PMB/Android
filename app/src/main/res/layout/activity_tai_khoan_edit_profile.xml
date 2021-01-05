@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/img_tkep_anhdadien"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/luan" />
@@ -24,10 +25,10 @@
 
     <ImageButton
         android:id="@+id/ic_Back"
-        android:onClick="backPreviousActivity"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/white"
+        android:onClick="backPreviousActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_back" />
@@ -36,39 +37,39 @@
         android:id="@+id/editTextTextPassword2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:drawableEnd="@drawable/arrow_forward_ios"
         android:ems="10"
-        android:hint="Mật Khẩu"
+        android:hint="@string/mat_khau_tk"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_tkep_ten"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btn_DangXuat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="50dp"
         android:background="@android:color/holo_red_dark"
         android:onClick="openLogInActivity"
-        android:text="Đăng Xuất"
+        android:text="@string/dang_xuat_tk"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tkep_ten"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Mật khẩu"
+        android:layout_marginTop="25dp"
+        android:text="@string/txt_mat_khau_tk"
         android:textSize="20sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tkep_email" />
 
     <TextView
         android:id="@+id/textView7"
@@ -76,51 +77,55 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Thông tinh cá nhân"
+        android:text="@string/thong_tin_ca_nhan"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <EditText
-        android:id="@+id/txt_ThoiGianNau_Create"
+        android:id="@+id/txt_tkep_ten"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:drawableEnd="@drawable/arrow_forward_ios"
         android:ems="10"
-        android:hint="Tên"
+        android:hint="@string/ten_tk"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/txt_tkep_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:drawableEnd="@drawable/arrow_forward_ios"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_tkep_ten"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tkep_sdt"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/txt_tkep_sdt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:drawableEnd="@drawable/arrow_forward_ios"
         android:ems="10"
-        android:hint="Số Điện Thoại"
+        android:hint="@string/so_dien_thoai_tk"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txt_ThoiGianNau_Create"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ThoiGianNau_Create" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_tkep_ten"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tkep_ten"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/ic_add_image"
@@ -129,5 +134,29 @@
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:srcCompat="@drawable/ic_baseline_add_image" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_ten_tk"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tkep_ten"
+        app:layout_constraintStart_toStartOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_sodienthoai_tk"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tkep_sdt"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_ten" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_email_tk"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tkep_email"
+        app:layout_constraintStart_toStartOf="@+id/txt_tkep_sdt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

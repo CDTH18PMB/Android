@@ -20,11 +20,10 @@
             android:id="@+id/const_MonCuaToi"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginTop="32dp"
             android:background="@color/blue_primary_active"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintTop_toBottomOf="@+id/txt_tk_username">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
@@ -38,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="Món của tôi"
+                android:text="@string/mon_cua_toi"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +52,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_book_white" />
+                app:srcCompat="@drawable/ic_book_white"
+                android:contentDescription="TODO" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="Đã thích"
+                android:text="@string/da_thich"
                 android:textColor="@color/blue_primary_active"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +93,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_like_blue" />
+                app:srcCompat="@drawable/ic_baseline_like_blue"
+                android:contentDescription="TODO" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
@@ -107,8 +108,10 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/img_tk_anhdaidien"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="TODO"
                 android:src="@drawable/luan" />
         </androidx.cardview.widget.CardView>
 
@@ -123,18 +126,18 @@
             app:srcCompat="@drawable/settings" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txt_tk_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:drawableRight="@drawable/ic_edit"
             android:drawablePadding="10dp"
             android:onClick="openEditProfileActivity"
-            android:text="Username"
+            android:text="@string/username_tk"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="@+id/cardView"
             app:layout_constraintStart_toStartOf="@+id/cardView"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:drawableRightCompat="@drawable/ic_edit" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
@@ -156,8 +159,10 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/const_MonCuaToi" />
+            app:layout_constraintTop_toBottomOf="@+id/const_MonCuaToi"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

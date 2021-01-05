@@ -1,94 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
+    android:paddingTop="5dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txt_taikhoandathichtennguoitao"
+            android:id="@+id/txt_tkdt_tennguoitao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên người tạo"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="@+id/txt_taikhoandathichtenmonan" />
+            android:text="@string/ten_nguoi_tao_tk"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_tkdt_anhdaidien"
+            app:layout_constraintStart_toStartOf="@+id/txt_tkdt_tenmonan" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btn_tkdt_thich"
             android:layout_width="50dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
             android:background="@android:color/holo_red_light"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/img_tkdt_anhdaidien"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_tkdt_anhdaidien"
             app:srcCompat="@drawable/ic_like_white" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/img_tkdt_anhdaidien"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/luan" />
 
         <TextView
-            android:id="@+id/txt_taikhoandathichtenmonan"
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_tkdt_tenmonan"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Tên món ăn"
-            android:textSize="24sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/ten_mon_an_tk"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+            app:layout_constraintEnd_toStartOf="@+id/btn_tkdt_thich"
+            app:layout_constraintStart_toEndOf="@+id/img_tkdt_anhdaidien"
+            app:layout_constraintTop_toTopOf="@+id/img_tkdt_anhdaidien" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/txt_tkdt_luotxem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
-            android:drawableLeft="@drawable/visibility"
-            android:text="5000"
-            android:textSize="20sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView33"
-            app:layout_constraintStart_toStartOf="@+id/txt_taikhoandathichtenmonan" />
+            android:layout_marginStart="97dp"
+            android:drawablePadding="5dp"
+            android:text="@string/luot_xem_tk"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_tkdt_luotthich"
+            app:layout_constraintStart_toStartOf="@+id/txt_tkdt_tenmonan"
+            app:drawableLeftCompat="@drawable/visibility" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/txt_tkdt_thoigian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="144dp"
-            android:drawableLeft="@drawable/ic_baseline_timer_24"
-            android:text="15 phút"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="@+id/txt_taikhoandathichtenmonan" />
+            android:layout_marginStart="97dp"
+            android:drawablePadding="5dp"
+            android:text="@string/thoi_gian_nau_tk"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_tkdt_anhdaidien"
+            app:layout_constraintStart_toStartOf="@+id/txt_tkdt_tenmonan"
+            app:drawableLeftCompat="@drawable/ic_baseline_timer_24" />
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/txt_tkdt_luotthich"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:drawableLeft="@drawable/favorite_border"
-            android:text="3000"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/txt_taikhoandathichtenmonan"
-            app:layout_constraintTop_toBottomOf="@+id/txt_taikhoandathichtenmonan" />
+            android:drawablePadding="5dp"
+            android:text="@string/luot_thich_tk"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_tkdt_tennguoitao"
+            app:layout_constraintStart_toStartOf="@+id/txt_tkdt_tenmonan"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tkdt_tenmonan"
+            app:drawableLeftCompat="@drawable/favorite_border" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
