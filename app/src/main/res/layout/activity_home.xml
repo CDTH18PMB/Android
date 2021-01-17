@@ -19,19 +19,20 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
             android:text="Top trending"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/searchView"
-            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_CacBuocLam"
+            android:id="@+id/recyclerView_Toptrending"
             android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/searchView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -43,16 +44,16 @@
             android:text="Gợi ý món"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView_CacBuocLam"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView_CacBuocLam" />
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_Toptrending"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_Toptrending" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
+            android:id="@+id/recyclerView_GoiYMon"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/recyclerView_CacBuocLam"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView_CacBuocLam"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView_Toptrending"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_Toptrending"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
@@ -63,31 +64,28 @@
             android:text="Gợi ý món"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView2"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_GoiYMon"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_GoiYMon" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView4"
+            android:id="@+id/recyclerView_GoiYMon2"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/recyclerView2"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView2"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView_GoiYMon"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_GoiYMon"
             app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/border_radius"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_refrest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="212dp"
+            android:text="Refresh"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/textView8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

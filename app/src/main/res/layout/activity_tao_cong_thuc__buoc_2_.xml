@@ -183,7 +183,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <EditText
-            android:id="@+id/txt_ThoiGianNau_Create"
+            android:id="@+id/edittext_seach"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -229,7 +229,7 @@
             android:hint="Nhập vào nguyên liệu cần"
             android:inputType="textMultiLine"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/txt_ThoiGianNau_Create"
+            app:layout_constraintEnd_toEndOf="@+id/edittext_seach"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView16"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />

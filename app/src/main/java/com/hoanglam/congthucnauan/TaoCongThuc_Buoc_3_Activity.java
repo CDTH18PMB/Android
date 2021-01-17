@@ -43,7 +43,7 @@ public class TaoCongThuc_Buoc_3_Activity extends AppCompatActivity {
     }
 
     public void khoiTao(){
-        this.mRecyclerView = findViewById(R.id.recyclerView_CacBuocLam);
+        this.mRecyclerView = findViewById(R.id.recyclerView_Toptrending);
         this.mAdapter = new CacBuocLamAdapter(this,cacBuocLam);
         this.mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

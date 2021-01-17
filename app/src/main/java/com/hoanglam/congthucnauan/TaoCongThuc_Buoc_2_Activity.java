@@ -1,26 +1,16 @@
 package com.hoanglam.congthucnauan;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ComponentActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +41,7 @@ public class TaoCongThuc_Buoc_2_Activity extends AppCompatActivity {
         txt_Easy = findViewById(R.id.txt_Easy_Create);
         txt_Normal = findViewById(R.id.txt_Normal_Create);
         txt_Hard = findViewById(R.id.txt_Hard_Create);
-        txt_ThoiGianNau = findViewById(R.id.txt_ThoiGianNau_Create);
+        txt_ThoiGianNau = findViewById(R.id.edittext_seach);
         txt_NguyenLieu = findViewById(R.id.txt_NguyenLieu_Create);
         doKho_Active(txt_Easy);
     }

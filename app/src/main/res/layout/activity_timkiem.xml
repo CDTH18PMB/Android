@@ -122,36 +122,39 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/txt_ThoiGianNau_Create"
+            android:id="@+id/edittext_seach"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
+            android:background="@drawable/duongvien_goctron"
             android:ems="10"
             android:hint="Tìm kiếm"
             android:inputType="textPersonName"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/image_Seach"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/image_Seach"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_ThoiGianNau_Create"
+            app:layout_constraintBottom_toBottomOf="@+id/edittext_seach"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_ThoiGianNau_Create"
+            app:layout_constraintTop_toTopOf="@+id/edittext_seach"
             app:srcCompat="@drawable/ic_baseline_tim_kiem_40" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView3"
+            android:id="@+id/recyclerView_TimKiem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="@+id/txt_ThoiGianNau_Create"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/txt_ThoiGianNau_Create"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/edittext_seach"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/image_Seach"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_seach"
             tools:ignore="MissingClass" />
 
         <TextView
@@ -170,9 +173,9 @@
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/recyclerView3"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView3"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView3" />
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView_TimKiem"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_TimKiem"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_TimKiem" />
 
         <TextView
             android:id="@+id/textView14"

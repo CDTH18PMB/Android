@@ -56,25 +56,25 @@
         android:id="@+id/txt_NguoiTao_MonAn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:text="TextView"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/img_MonAn"
-        app:layout_constraintStart_toStartOf="@+id/txt_LuotXem_MonAn" />
+        app:layout_constraintStart_toStartOf="@+id/txt_LuotXem_MonAn"
+        app:layout_constraintTop_toBottomOf="@+id/txt_LuotXem_MonAn" />
 
     <TextView
         android:id="@+id/txt_ThoiGianNau_MonAn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
         android:drawableLeft="@drawable/ic_baseline_timer_24"
         android:drawablePadding="5dp"
         android:gravity="center_vertical"
         android:text="TextView"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/txt_NguoiTao_MonAn"
-        app:layout_constraintTop_toTopOf="@+id/txt_NguoiTao_MonAn" />
+        app:layout_constraintStart_toStartOf="@+id/txt_LuotThich_MonAn"
+        app:layout_constraintTop_toBottomOf="@+id/txt_LuotThich_MonAn" />
 
     <View
         android:id="@+id/divider"

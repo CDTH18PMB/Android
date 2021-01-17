@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hoanglam.congthucnauan">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CongThucNauAn"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ChiTietMonAnActivity"></activity>
+        <activity android:name=".activity_tim_mon_an"></activity>
+        <activity android:name=".ChiTietMonAnActivity" />
         <activity android:name=".MonAnActivity" />
         <activity android:name=".TaiKhoanActivity" />
         <activity android:name=".Tai_Khoan_Da_Thich" />
@@ -19,7 +22,7 @@
         <activity android:name=".Tai_khoan_edit_profile" />
         <activity android:name=".activity_dangky" />
         <activity android:name=".activity_home" />
-        <activity android:name=".activity_timkiem" />
+        <activity android:name=".activity_timkiem" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".TaoCongThuc_Success_Activity" />
         <activity android:name=".TaoCongThuc_Buoc_Final_Activity" />
         <activity android:name=".TaoCongThuc_Buoc_3_1_Activity" />
